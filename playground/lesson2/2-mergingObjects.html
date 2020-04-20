@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Statements</title>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/lodash"></script>
+    <script>
+      const meatInventory = {
+        bacon: 2,
+        sausage: 3,
+      };
+
+      const veggieInventory = {
+        lettuce: 5,
+        tomatoes: 3,
+      };
+
+      const produceInventory = {
+        milk: 5,
+        yoghurt: 3,
+      };
+
+      // Using lodash
+      // https://lodash.com
+      const resultMergingLodash = _.merge(meatInventory, veggieInventory);
+      console.log('Result merging using Lodash: ' + resultMergingLodash);
+
+      // Using spread operator
+      const result = {
+        ...meatInventory,
+        ...veggieInventory,
+        ...produceInventory,
+        kiwi: 4,
+      };
+
+      console.log(result);
+    </script>
+  </body>
+</html>

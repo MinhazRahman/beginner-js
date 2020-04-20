@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+
+  <body>
+    <script>
+      // Declaring functions
+      // 1. Function Declaration
+      const parameter = 'This is argument';
+
+      function myFirstFunction() {
+        console.log('Hello World!');
+      }
+
+      // 2. Function expression
+      let myFirstFunction = function () {
+        console.log('Hello World!');
+      };
+
+      // 3. Arrow function
+      let greeting = (name, lastName) => {
+        console.log(`Hey ${name} ${lastName}`);
+
+        return name;
+      };
+
+      // ! Arrow functions return value by default
+      hello = () => 'Hello World!';
+      hello = (val) => 'Hello ' + val;
+
+      // Invoking a function
+      greeting('Mike');
+
+      // Default arguments (using equal sign followed by the value)
+      let greetingWithDefaultParameter = (name, lastName = 'N/A') => {
+        console.log(`First name: ${name}, Last name: ${lastName}`);
+
+        return name;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Statements</title>
+  </head>
+  <body>
+    <script>
+      // Conditional statements
+
+      // IF
+      if (1 > 2) {
+        console.log('Yep');
+      }
+      // Create two vars: first name and last name
+      // If first name is David OR both first name and last name are John Doe, print "Cool name!"
+      let firstName = 'Michael';
+      let lastName = 'Doe Jr';
+
+      // if (
+      //   firstName === 'David' ||
+      //   (firstName === 'John' && lastName === 'Doe')
+      // ) {
+      //   console.log('cool name!');
+      // } else {
+      //   console.log(`I don't like your name`);
+      // }
+
+      //IF Else
+      // It is freezing outside!
+      // It is hot outside
+      // Go for it is is pretty outside
+
+      const temp = 75;
+      if (temp <= 32) {
+        console.log('It is freezing outside!');
+      } else if (temp >= 100) {
+        console.log('It is hot outside');
+      } else {
+        console.log("It's nice outside!");
+      }
+
+      // Ternary Operator
+      let price = 10;
+      let day = 'Monday';
+
+      // Classic IF statement
+      if (day === 'Monday') {
+        price -= 1;
+      } else {
+        price += 1;
+      }
+
+      // Ternary Operator
+      day === 'Monday' ? (price -= 1) : (price += 1);
+
+      // Switch Statement
+      // Syntax;
+      const x = "value2"
+      switch (x) {
+        case 'value1': // if (x === 'value1')
+          // ...
+          
+          break;
+
+        case 'value2': // if (x === 'value2')
+          // ...
+          break;
+
+        default:
+          // ...
+          break;
+      }
+
+      // Having a variable
+      let a = 2 + 2;
+
+      // Write a switch statement that will print: "Exact match!" if the value equals to 4.
+      // If it's 3 or 5, indicate it's too small or too large
+    </script>
+  </body>
+</html>
