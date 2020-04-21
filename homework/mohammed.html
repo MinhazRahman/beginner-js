@@ -15,24 +15,24 @@
         /* Homework: 1. Write Fahrenheit to Celsius converter function. */
 
         //function fahrenheitToCelsius converts temperature from degree fahrenheit to degree celsius
-        function fahrenheitToCelsius(tempF) {
+        function fahrenheitToCelsius(tempFahrenheit) {
             //temperature in Celsius
-            let tempC;
+            let tempCelsius;
 
             //check if tempF is a number or not
-            if (isNaN(tempF)) {
-                console.log(`${tempF} is not a number! Please pass a number as temperature.`);
+            if (isNaN(tempFahrenheit)) {
+                console.log(`${tempFahrenheit} is not a number! Please pass a number as temperature.`);
                 return null;
             }
 
             //fahrenheit to celsius conversion formula
-            tempC = (tempF - 32) * (5 / 9);
+            tempCelsius = (tempFahrenheit - 32) * (5 / 9);
 
             //format tempC with two decimal places
-            tempC = Number(tempC.toFixed(2));
-            console.log(`${tempF}°F is ${tempC}°C.`);
+            tempCelsius = Number(tempCelsius.toFixed(2));
+            console.log(`${tempFahrenheit}°F is ${tempCelsius}°C.`);
 
-            return tempC;
+            return tempCelsius;
         }
 
         //input temperature in fahrenheit
@@ -72,28 +72,28 @@
 
             //variables to store percentage and grade
             let scoreInPercentage;
-            let grade = 0;
+            let grade = '';
 
             //calculate score in percentage
             scoreInPercentage = score * 100 / maxPossibleScore;
 
             //calculate grade
-            if (scoreInPercentage >= 0 && scoreInPercentage <= 59) {
+            if (scoreInPercentage <= 59) {
                 grade = 'F';
-            } else if (scoreInPercentage >= 60 && scoreInPercentage <= 69) {
+            } else if (scoreInPercentage <= 69) {
                 grade = 'D';
-            } else if (scoreInPercentage >= 70 && scoreInPercentage <= 79) {
+            } else if (scoreInPercentage <= 79) {
                 grade = 'C';
-            } else if (scoreInPercentage >= 80 && scoreInPercentage <= 89) {
+            } else if (scoreInPercentage <= 89) {
                 grade = 'B';
-            } else if (scoreInPercentage >= 90 && scoreInPercentage <= 100) {
+            } else if (scoreInPercentage <= 100) {
                 grade = 'A';
             } else {
-                grade = 0;
+                grade = '';
             }
 
             //log the result
-            if (grade !== 0) {
+            if (grade !== '') {
                 console.log(`You got a ${grade} (${scoreInPercentage}%)!`);
             } else {
                 console.log(`Not a valid grading system.`);
@@ -101,7 +101,7 @@
         }
 
         //to calculate grade call the function by passing score and maxPossibleScore
-        calculateGrade(15, 20);
+        calculateGrade(14, 20);
     </script>
 </body>
 
