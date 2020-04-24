@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Homework: FizzBuzz and Palindrome</title>
+</head>
+
+<body>
+    <script>
+        //Homework: 1. Write a function that checks whether a passed string is palindrome or not. 
+
+        function isPalindrome(word) {
+            //points to the position of the first character
+            let i = 0;
+            //points to the position of the last character
+            let j = word.length - 1;
+
+            //in each iteration, compare the equality of the characters from both ends
+            while (i < j) {
+                //if there is a mismatch
+                if (word[i] !== word[j]) {
+                    return false;
+                }
+                //increment the left pointer
+                i++;
+                //decrement the right pointer
+                j--;
+            }
+            //if there is no mismatch, then the string is palindrome
+            return true;
+        }
+
+        //check if a string is palindrome or not
+        console.log(isPalindrome('cat'));
+        console.log(isPalindrome('dad'));
+        console.log(isPalindrome('NOTAPALINDROME'));
+        console.log(isPalindrome('malayalam'));
+        console.log(isPalindrome('ATOYOTA'));
+        console.log(isPalindrome('ISAPALINILAPASI'));
+        
+    </script>
+</body>
+
+</html>
