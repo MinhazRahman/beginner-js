@@ -38,7 +38,44 @@
         console.log(isPalindrome('malayalam'));
         console.log(isPalindrome('ATOYOTA'));
         console.log(isPalindrome('ISAPALINILAPASI'));
-        
+
+        //Homework: 2. 2. Write a function that takes a number as an argument (call it maxNum) 
+        //and adds each number from 1 to maxNum to an array. Checks whether a number is a multiple of 3 or 5
+        function fizzBuzz(maxNum) {
+            //initialize the array and the message as empty
+            let fizzBuzzNumbers = [];
+            let message = '';
+
+            //loop through 1 to maxNum
+            for (let x = 1; x <= maxNum; x++) {
+                //at the start of each iteration, the message is empty
+                message = '';
+
+                //if the number is multiple of 3, the message will be 'Fizz',
+                if (x % 3 === 0) {
+                    message += 'Fizz';
+                }
+                //if the number is multiple of 5, the message will be 'Buzz'
+                //and when the number is multiple of both 3 and 5, the message will be 'FizzBuzz'
+                if (x % 5 === 0) {
+                    message += 'Buzz';
+                }
+
+                //when the number is neither a multiple of 3 nor a multiple of 5, the message will be empty
+                if (message === '') {
+                    //add the number itself to the array
+                    fizzBuzzNumbers.push(x);
+                } else {
+                    //add the message to the array
+                    fizzBuzzNumbers.push(message);
+                }
+            }
+
+            return fizzBuzzNumbers;
+        }
+
+        //call the fizzBuzz function to check if a number is a multiple of 3 or 5
+        console.log(fizzBuzz(30));
     </script>
 </body>
 
