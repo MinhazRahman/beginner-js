@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+    // !-- 1. Write a function that checks whether a passed string is 
+    
+    function isPalindrome(word) {
+        //making all symbols to lower case 
+        var lowSrting = word.toLowerCase().replace();
+        var reverseStr = lowSrting.split('').reverse(/[^a-zA-Z0-9]+/g,'').join(''); 
+        
+
+if(lowSrting!==reverseStr) {
+    console.log(`not a palindrome  ${word} - ${reverseStr}`);
+}else{
+    console.log(`palindrome ${word} - ${reverseStr} `);
+}
+return lowSrting === reverseStr;
+    }
+    isPalindrome("cat");
+    isPalindrome("dad");
+    isPalindrome("eye");
+    isPalindrome("A man, a plan, a canal. Panama");
+
+
+//     2. Write a function that takes a number as an argument (call it maxNum) 
+function fizzBuzz (maxNum) {
+  var myArray = ``;
+  //and adds each number from 1 to maxNum to an array.
+  for (i=0; i<=maxNum; i++){
+      myArray= [];
+      
+      if (i % 3 === 0 && 1 % 5 === 0){ 
+        myArray.push(`FizzBuzz`);
+    }else if (i % 3 === 0){
+        myArray.push(`Fizz`);
+    }else if (i % 5 === 0){
+      myArray.push(`Buzz`);
+    }else {
+        myArray.push(i)
+     }
+     console.log(myArray);
+    
+  }
+
+return myArray;
+}
+
+
+fizzBuzz(15);
+
+// For each multiple of 3, add word Fizz instead of the number to the array.
+// For each multiple of 5, add word Buzz instead of the number to the array.
+// For numbers which are multiples of both 3 and 5, add FizzBuzz instead 
+//of the number.
+// Return the array.
+// I.e. you should get this array when you pass 15 as an arg to your function:
+// [
+//   "1",
+//   "2",
+//   "Fizz",
+//   "4",
+//   "Buzz",
+//   "Fizz",
+//   "7",
+//   "8",
+//   "Fizz",
+//   "Buzz",
+//   "11",
+//   "Fizz",
+//   "13",
+//   "14",
+//   "FizzBuzz"
+// ]
+    // palindrome or not. A palindrome is a string that is 
+    //the same read forward or backward.
+    //     For example:
+    //     isPalindrome("cat") // Should return false
+    //     isPalindrome("dad") // Should return true -->
+
+
+   
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
